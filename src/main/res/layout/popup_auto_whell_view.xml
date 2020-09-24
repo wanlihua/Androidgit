@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup_auto_wheel_v"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#50000000">
+
+    <LinearLayout
+        android:id="@+id/popup_auto_wheel_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/popup_auto_cancle_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:padding="5dp"
+                android:text="@string/cancel"
+                android:textColor="#1267E4"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/popup_auto_ok_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:padding="5dp"
+                android:text="@string/select"
+                android:textColor="#1267E4"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <com.contrarywind.view.WheelView
+            android:id="@+id/popup_auto_wheel"
+            android:layout_width="match_parent"
+            android:layout_height="280dp" />
+    </LinearLayout>
+
+</RelativeLayout>

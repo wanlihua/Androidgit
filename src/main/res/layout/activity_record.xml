@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white_gray"
+    android:orientation="vertical"
+    tools:context="com.dtl.gemini.ui.cfd.activity.RecordActivity">
+
+    <include layout="@layout/head" />
+
+    <RadioGroup
+        android:id="@+id/cfd_record_rg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:button="@null"
+            android:text="11111"
+            android:visibility="invisible" />
+
+        <RadioButton
+            android:id="@+id/close_order_record"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_kline_selector_botom"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/close_order_record"
+            android:textColor="@drawable/selector_text_1_or_2"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.4"
+            android:button="@null"
+            android:visibility="invisible" />
+
+
+        <RadioButton
+            android:id="@+id/unclose_order_record"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_kline_selector_botom"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/unclose_order_record"
+            android:textColor="@drawable/selector_text_1_or_2"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:button="@null"
+            android:text="11111"
+            android:visibility="invisible" />
+    </RadioGroup>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refersh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnablePreviewInEditMode="true"
+        app:srlPrimaryColor="@color/v2_btn">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.dtl.gemini.widget.MyListView
+                    android:id="@+id/list_mlv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp"
+                    android:divider="@null"
+                    android:visibility="gone" />
+
+                <include layout="@layout/data_null" />
+            </LinearLayout>
+        </ScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

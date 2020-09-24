@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.dtl.gemini.ui.me.activity.UpdateAssetPwdActivity">
+
+    <include layout="@layout/head" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/new_asset_pwd"
+            android:textColor="@color/text2"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/item_coin_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/pwd1_et"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="#fff"
+                android:fontFamily="monospace"
+                android:gravity="center_vertical"
+                android:hint="@string/pwd_type_hint"
+                android:inputType="textPassword"
+                android:maxLength="16"
+                android:padding="10dp"
+                android:singleLine="false"
+                android:textColor="@color/text2"
+                android:textColorHint="@color/text1"
+                android:textCursorDrawable="@drawable/text_cursor_drawable_btnbg"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/see_pwd1_iv"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:padding="5dp"
+                android:src="@mipmap/icon_see_off"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            android:text="@string/asset_pwd_confirm"
+            android:textColor="@color/text2"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/item_coin_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/pwd2_et"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="#fff"
+                android:fontFamily="monospace"
+                android:gravity="center_vertical"
+                android:hint="@string/asset_pwd_confirm"
+                android:inputType="textPassword"
+                android:maxLength="16"
+                android:padding="10dp"
+                android:singleLine="false"
+                android:textColor="@color/text2"
+                android:textColorHint="@color/text1"
+                android:textCursorDrawable="@drawable/text_cursor_drawable_btnbg"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/see_pwd2_iv"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:padding="5dp"
+                android:src="@mipmap/icon_see_off"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            android:text="@string/sms_code"
+            android:textColor="@color/text2"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/item_coin_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/code_et"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="#fff"
+                android:fontFamily="monospace"
+                android:gravity="center_vertical"
+                android:hint="@string/code"
+                android:inputType="number"
+                android:maxLength="6"
+                android:padding="10dp"
+                android:singleLine="false"
+                android:textColor="@color/text2"
+                android:textColorHint="@color/text1"
+                android:textCursorDrawable="@drawable/text_cursor_drawable_btnbg"
+                android:textSize="15sp"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@color/bg_white_gray" />
+
+            <TextView
+                android:id="@+id/getcode_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="@string/send"
+                android:textColor="@color/v2_btn"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/confirm_btn"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/login_btn_bg"
+        android:text="@string/confirm"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+</LinearLayout>
+

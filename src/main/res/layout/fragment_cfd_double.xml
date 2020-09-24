@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white_gray"
+    android:orientation="vertical"
+    tools:context=".ui.cfd.activity.CfdDoubleFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cfd_blue"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_token"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_token"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="BTC/USDT"
+                android:textColor="@color/text3"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@+id/tv_token"
+                android:padding="2dp"
+                android:src="@mipmap/icon_select_black" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_price_us"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right" />
+
+        <TextView
+            android:id="@+id/tv_price_cny"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp" />
+
+        <ImageView
+            android:id="@+id/iv_kline"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:layout_marginLeft="15dp"
+            android:padding="6dp"
+            android:src="@mipmap/icon_kline" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/cfd_transaction_rg"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="2dp"
+        android:weightSum="4">
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"
+            android:button="@null"
+            android:text="11111"
+            android:visibility="invisible" />
+
+        <RadioButton
+            android:id="@+id/cfd_open_position"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_kline_selector_botom"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/open_position"
+            android:textColor="@drawable/selector_text_1_or_2"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.4"
+            android:button="@null"
+            android:visibility="invisible" />
+
+        <RadioButton
+            android:id="@+id/cfd_position"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_kline_selector_botom"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/position"
+            android:textColor="@drawable/selector_text_1_or_2"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.4"
+            android:button="@null"
+            android:text="11111"
+            android:visibility="invisible" />
+
+        <RadioButton
+            android:id="@+id/cfd_record"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_kline_selector_botom"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/record"
+            android:textColor="@drawable/selector_text_1_or_2"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"
+            android:button="@null"
+            android:text="11111"
+            android:visibility="invisible" />
+    </RadioGroup>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refersh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <com.dtl.gemini.widget.MyViewPager
+                android:id="@+id/cfd_transaction_viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp" />
+
+        </ScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>
+

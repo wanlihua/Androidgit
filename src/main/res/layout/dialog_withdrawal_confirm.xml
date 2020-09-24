@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="20dp"
+    tools:ignore="MissingConstraints">
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:text="@string/safety_verification"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/dialog_close_tv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dialog_close_tv" />
+
+    <TextView
+        android:id="@+id/dialog_close_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:text="@string/cancel"
+        android:textSize="16sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/v1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/bg_white_gray"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_close_tv" />
+
+    <LinearLayout
+        android:id="@+id/code_ll"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/item_coin_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/v1">
+
+        <EditText
+            android:id="@+id/code_et"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:fontFamily="monospace"
+            android:gravity="center_vertical"
+            android:hint="@string/sms_code"
+            android:inputType="number"
+            android:maxLength="6"
+            android:padding="10dp"
+            android:singleLine="false"
+            android:textColor="@color/text2"
+            android:textColorHint="@color/text1"
+            android:textCursorDrawable="@drawable/text_cursor_drawable_btnbg"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/bg_white_gray" />
+
+        <TextView
+            android:id="@+id/getcode_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="@string/send"
+            android:textColor="@color/v2_btn"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pwd_ll"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/item_coin_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/code_ll">
+
+        <EditText
+            android:id="@+id/asset_pwd"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:fontFamily="monospace"
+            android:gravity="center_vertical"
+            android:hint="@string/asset_pwd"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:padding="10dp"
+            android:singleLine="false"
+            android:textColor="@color/text2"
+            android:textColorHint="@color/text1"
+            android:textCursorDrawable="@drawable/text_cursor_drawable_btnbg"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/see_pwd_iv"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="5dp"
+            android:src="@mipmap/icon_see_off"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/to_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/forget_pwd"
+        android:textColor="@color/v2_btn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pwd_ll" />
+
+    <Button
+        android:id="@+id/dialog_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/login_btn_bg"
+        android:text="@string/confirm"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/to_activity" />
+</androidx.constraintlayout.widget.ConstraintLayout>

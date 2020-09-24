@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape>
+            <!--<corners android:radius="50dp" />-->
+            <size android:height="20dp" />
+            <solid android:color="@color/transparent" />
+        </shape>
+    </item>
+    <item android:id="@android:id/progress">
+        <!--<scale-->
+        <!--android:drawable="@drawable/activity_details_pro_round"-->
+        <!--android:scaleWidth="100%"-->
+        <!--android:scaleHeight=""/>-->
+        <clip
+            android:clipOrientation="horizontal"
+            android:gravity="right">
+            <shape>
+                <!--<corners android:radius="1000dp" />-->
+                <size
+                    android:width="100dp"
+                    android:height="20dp" />
+                <gradient
+                    android:angle="-90"
+                    android:centerColor="@color/cfd_red"
+                    android:endColor="@color/cfd_red"
+                    android:startColor="@color/cfd_red"
+                    android:type="linear" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

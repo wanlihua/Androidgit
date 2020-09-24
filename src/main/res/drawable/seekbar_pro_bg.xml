@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@android:id/background"
+        android:height="10dp"
+        android:gravity="center_vertical">
+        <bitmap android:src="@drawable/icon_cfd_pro" />
+    </item>
+
+    <item
+        android:id="@android:id/secondaryProgress"
+        android:height="10dp"
+        android:gravity="center_vertical">
+        <clip>
+            <bitmap android:src="@drawable/icon_cfd_pro" />
+        </clip>
+    </item>
+
+    <item
+        android:id="@android:id/progress"
+        android:height="10dp"
+        android:gravity="center_vertical">
+        <clip>
+            <bitmap android:src="@drawable/icon_cfd_pros" />
+        </clip>
+    </item>
+</layer-list>

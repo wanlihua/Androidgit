@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="20dp"
+    tools:ignore="MissingConstraints">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:text="@string/close_position"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/dialog_close_tv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dialog_close_tv" />
+
+    <TextView
+        android:id="@+id/dialog_close_tv"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:background="@drawable/stroke_white_v2btn_24"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="@color/v2_btn"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:text="@string/speed_open_rise"
+        android:textColor="@color/asset_green"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_close_tv" />
+
+    <LinearLayout
+        android:id="@+id/price_ll"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/item_coin_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_title">
+
+        <EditText
+            android:id="@+id/dialog_et1"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:fontFamily="monospace"
+            android:gravity="center_vertical"
+            android:hint="@string/close_price"
+            android:inputType="numberDecimal"
+            android:maxLength="10"
+            android:padding="10dp"
+            android:singleLine="false"
+            android:textColor="@color/text2"
+            android:textColorHint="@color/text1"
+            android:textCursorDrawable="@drawable/text_cursor_drawable_btnbg"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="USDT"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/dialog_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:text="=--- CNY"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/price_ll" />
+
+    <LinearLayout
+        android:id="@+id/number_ll"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/item_coin_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_time">
+
+        <EditText
+            android:id="@+id/dialog_et2"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:fontFamily="monospace"
+            android:gravity="center_vertical"
+            android:hint="@string/close_number"
+            android:inputType="numberDecimal"
+            android:maxLength="10"
+            android:padding="10dp"
+            android:layout_marginRight="5dp"
+            android:singleLine="false"
+            android:textColor="@color/text2"
+            android:textColorHint="@color/text1"
+            android:textCursorDrawable="@drawable/text_cursor_drawable_btnbg"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="BTC"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/dialog_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:text="@string/curr_number"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number_ll" />
+
+    <Button
+        android:id="@+id/dialog_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/login_btn_bg"
+        android:text="@string/close_position"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_content" />
+</androidx.constraintlayout.widget.ConstraintLayout>

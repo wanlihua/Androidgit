@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#ffffff</color>
+
+    <color name="colorGlobalStyle">#ffffff</color>
+    <!--<color name="colorHead">#313036</color>-->
+    <color name="colorHead">#ffffffff</color>
+    <color name="colorContent">#ffffff</color>
+    <color name="colorDefaultGray">#f5f5f5</color>
+
+    <color name="colorText">#fdc109</color>
+    <color name="colorMnemonicEnable">#222222</color>
+    <color name="colorMnemonicDisable">#bbbbbb</color>
+    <color name="colorMnemonicVerifyBg">#1b9ac4</color>
+
+    <color name="colorAlphaText">#7789d8</color>
+
+    <color name="colorYellow">#13ccac</color>
+    <color name="colorGRed">#f26670</color>
+    <color name="colorPurple">#9165ed</color>
+    <color name="colorGreen">#15a93f</color>
+    <color name="colorGreen2">#2caa6d</color>
+    <color name="colorDriver">#ededed</color>
+    <color name="colorTextDefault">#7d7d7d</color>
+    <color name="colorRed">#f05a7c</color>
+    <color name="colorWhite">#FFFFFF</color>
+
+    <color name="contentBg">#f5f5f5</color>
+
+    <color name="walletColor">#bee4dd</color>
+    <color name="textWhite">#ffffff</color>
+    <color name="textGreen">#13ccac</color>
+    <color name="outColor">#69d587</color>
+    <color name="inColor">#ff9d58</color>
+    <color name="colorDeep">#535353</color>
+    <color name="colorSlight">#959595</color>
+    <color name="textDeep">#1b1b1b</color>
+    <color name="textBlack">#2c3945</color>
+    <color name="textBasic1">#556574</color>
+    <color name="meTextColor">#414141</color>
+    <color name="textBasic2">#99a4af</color>
+    <color name="textRed1">#ff9d58</color>
+    <color name="textRed2">#ff6858</color>
+    <color name="communityStatus">#35343A</color>
+
+    <!--白天主题-->
+    <color name="day_backgroup_color">#ffffff</color>
+    <color name="day_one_text_color">#ffffff</color>
+    <color name="day_two_text_color">#ffffff</color>
+    <color name="day_three_text_color">#1f1422</color>
+    <!--夜间主题-->
+    <color name="night_backgroup_color">#ffffff</color>
+    <color name="night_one_text_color">#FFbbbbbb</color>
+    <color name="night_two_text_color">#8A9599</color>
+    <color name="night_there_text_color">#8A9599</color>
+    <!-- app主色调-->
+    <color name="main_color">#99a4af</color>
+    <color name="orange">#FA8C20</color>
+    <color name="wheel_divider_line_color">#FF000000</color>
+    <color name="wheel_item_text_color_selected">#FF0288ce</color>
+    <color name="wheel_item_text_color_no_select">#FFbbbbbb</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FFFF0000</color>
+    <color name="green">#FF00FF00</color>
+    <color name="white_alpha_half">#99FFFFFF</color>
+    <color name="gray">#FFF0F0F0</color>
+    <color name="gray1">#9d9b9c</color>
+    <color name="purple">#7a2696</color>
+    <color name="gray_deep">#c9000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="role_right_gray">#929292</color>
+    <color name="role_yellow_gray">#33CC99</color>
+    <color name="tv_right_gray">#929292</color>
+    <!--    <color name="bg_white_gray">#f2f2f2</color>-->
+    <!--    <color name="bg_white_gray">#f7f7f7</color>-->
+    <color name="bg_white_gray">#f5f6fa</color>
+    <color name="tv_talk_content">#FFB3B3B3</color>
+    <color name="line_recent_contact">#FFEEEEEE</color>
+    <color name="light_gray">#808080</color>
+    <color name="light_white">#33ffffff</color>
+    <color name="chat_tip_color">#FFcccccc</color>
+    <color name="blue">#5CA3E5</color>
+    <color name="main_blue">#3598db</color>
+    <color name="blue_check">#3493d4</color>
+    <color name="toast_white">#ffffff</color>
+    <color name="toast_stroke_gray">#99d4d4d4</color>
+
+
+    <color name="alpha_05_white">#0DFFFFFF</color>
+    <color name="alpha_10_white">#1AFFFFFF</color>
+    <color name="alpha_15_white">#26FFFFFF</color>
+    <color name="alpha_20_white">#33FFFFFF</color>
+    <color name="alpha_25_white">#40FFFFFF</color>
+    <color name="alpha_30_white">#4DFFFFFF</color>
+    <color name="alpha_35_white">#59FFFFFF</color>
+    <color name="alpha_40_white">#66FFFFFF</color>
+    <color name="alpha_45_white">#73FFFFFF</color>
+    <color name="alpha_50_white">#80FFFFFF</color>
+    <color name="alpha_55_white">#8CFFFFFF</color>
+    <color name="alpha_60_white">#99FFFFFF</color>
+    <color name="alpha_65_white">#A6FFFFFF</color>
+    <color name="alpha_70_white">#B3FFFFFF</color>
+    <color name="alpha_75_white">#BFFFFFFF</color>
+    <color name="alpha_80_white">#CCFFFFFF</color>
+    <color name="alpha_85_white">#D9FFFFFF</color>
+    <color name="alpha_90_white">#E6FFFFFF</color>
+    <color name="alpha_95_white">#F2FFFFFF</color>
+
+    <color name="alpha_05_black">#0D000000</color>
+    <color name="alpha_10_black">#1A000000</color>
+    <color name="alpha_15_black">#26000000</color>
+    <color name="alpha_20_black">#33000000</color>
+    <color name="alpha_25_black">#40000000</color>
+    <color name="alpha_30_black">#4D000000</color>
+    <color name="alpha_35_black">#59000000</color>
+    <color name="alpha_40_black">#66000000</color>
+    <color name="alpha_45_black">#73000000</color>
+    <color name="alpha_50_black">#80000000</color>
+    <color name="alpha_55_black">#8C000000</color>
+    <color name="alpha_60_black">#99000000</color>
+    <color name="alpha_65_black">#A6000000</color>
+    <color name="alpha_70_black">#B3000000</color>
+    <color name="alpha_75_black">#BF000000</color>
+    <color name="alpha_80_black">#CC000000</color>
+    <color name="alpha_85_black">#D9000000</color>
+    <color name="alpha_90_black">#E6000000</color>
+    <color name="alpha_95_black">#F2000000</color>
+    <color name="item_coin_left">#792698</color>
+    <color name="item_coin_right">#9431bc</color>
+    <color name="activity_bg">#360d45</color>
+    <color name="activity_text">#FBEAB2</color>
+    <color name="activity_text_bg">#6B3A7E</color>
+    <color name="orange_1">#fe8c1f</color>
+    <color name="orange_2">#ff9d21</color>
+    <color name="orange_3">#ffad20</color>
+    <color name="me_wallet_pro_1">#fafafc</color>
+    <color name="me_wallet_pro_2">#b4b7db</color>
+    <color name="me_bb_pro_1">#f8fefc</color>
+    <color name="me_bb_pro_2">#a2eddc</color>
+    <color name="v1_blue">#1ab3ff</color>
+    <color name="share_text">#5160df</color>
+    <color name="activity_orang">#ff3744</color>
+    <color name="max_add_user">#368fff</color>
+    <color name="v3_error">#ff5101</color>
+    <color name="day_add_user">#fea903</color>
+    <color name="bg">#FAFAFA</color>
+    <color name="blacktwo">#313131</color>
+    <color name="importtext">#35343A</color>
+    <color name="activitylist">#F0EFF5</color>
+    <color name="grey">#aaaaaa</color>
+    <color name="update_text">#222857</color>
+    <color name="update_bg">#FAFAFA</color>
+    <color name="update_ok">#4B55AE</color>
+    <color name="transfer_topbg">#D0F5CA</color>
+    <color name="home_two">#1D2E66</color>
+    <color name="transfers">#54434343</color>
+    <color name="die">#FE4E63</color>
+    <color name="zhang">#00CE9F</color>
+    <color name="apps_bg">#FC615C</color>
+    <color name="games_bg">#680D0C</color>
+    <color name="gray_bg">#f0eff5</color>
+    <color name="gray_btn">#EBEBEB</color>
+    <color name="gray_line">#ebebeb</color>
+    <!--    <color name="gray_text">#919191</color>-->
+    <color name="gray_text">#e1e2e6</color>
+    <color name="red_FE3D52">#FE3D52</color>
+    <color name="green_26C47A">#26C47A</color>
+    <color name="textcolor_2B1E2F">#2B1E2F</color>
+    <color name="yellow">#ffdc01</color>
+    <color name="kline_bg">#162132</color>
+    <color name="bar_grey">#393a3e</color>
+    <color name="white_overlay">#ffffffff</color>
+    <color name="black_overlay">#ff000000</color>
+    <color name="red_overlay">#ffff0000</color>
+    <color name="gray_overlay">#ff838b8b</color>
+    <color name="alpha_overlay">#a0000000</color>
+    <color name="color_48baf3">#48BAF3</color>
+    <color name="md_white_1000">#ffffff</color>
+    <color name="half_red">#9000</color> <!--!设置透明度-->
+    <color name="text">#000000</color>
+    <color name="text1">#878787</color>
+    <color name="text2">#151515</color>
+    <color name="text3">#222857</color>
+
+    <color name="v1_btn">#a197a5</color>
+    <color name="v2_btn">#2f73ff</color>
+
+    <color name="asset_green">#1cac91</color>
+    <color name="asset_red">#f3535f</color>
+    <color name="asset_blue">#2f73ff</color>
+    <color name="asset_blues">#4752a4</color>
+
+    <color name="cfd_blue">#f4f9ff</color>
+    <color name="cfd_green">#e8f7f4</color>
+    <color name="cfd_red">#fdedee</color>
+
+
+</resources>

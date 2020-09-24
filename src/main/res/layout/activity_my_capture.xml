@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/activity_second"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/black"
+tools:context="com.dtl.gemini.ui.asset.activity.MyCaptureActivity">
+
+<FrameLayout
+    android:id="@+id/fl_my_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+
+<ImageView
+    android:id="@+id/second_button1"
+    android:layout_width="45dp"
+    android:layout_height="45dp"
+    android:layout_marginTop="28dp"
+    android:padding="13dp"
+    android:src="@mipmap/icon_back_white" />
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_gravity="bottom"
+    android:layout_marginBottom="30dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+    <ImageView
+        android:id="@+id/picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/icon_picture" />
+
+    <ImageView
+        android:id="@+id/lighting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/icon_lighting_off" />
+</RelativeLayout>
+
+
+</FrameLayout>

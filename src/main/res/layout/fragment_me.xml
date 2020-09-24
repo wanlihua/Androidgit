@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white_gray"
+    android:orientation="vertical"
+    tools:context=".ui.me.activity.MeFragment"
+    tools:ignore="MissingConstraints">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:adjustViewBounds="true"
+        android:background="@mipmap/icon_me_top_bg"
+        android:fitsSystemWindows="true" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/me_refersh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="35dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.dtl.gemini.widget.CircleImageView
+                        android:id="@+id/me_head_civ"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@mipmap/icon_default_head" />
+
+                    <ImageView
+                        android:id="@+id/iv_grade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        android:adjustViewBounds="true"
+                        android:src="@mipmap/icon_grade_zero" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/me_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/login_regist"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/phone"
+                    android:textColor="@color/white" />
+
+                <LinearLayout
+                    android:id="@+id/ll_purchase_level"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/item_coin_white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/purchase_level_title" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="@string/purchase_level_hint" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:adjustViewBounds="true"
+                        android:padding="4dp"
+                        android:rotation="-90"
+                        android:src="@mipmap/icon_select_black" />
+                </LinearLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/white_radius_40"
+                    android:visibility="gone"
+                    app:cardCornerRadius="35dp"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/profit_unrealized_cl"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/profit_unrealized_type"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:gravity="right"
+                                android:text="+"
+                                android:textColor="@color/v2_btn"
+                                android:textSize="15sp"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="@+id/profit_unrealized"
+                                app:layout_constraintHorizontal_weight="0.8"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toLeftOf="@+id/profit_unrealized" />
+
+                            <TextView
+                                android:id="@+id/profit_unrealized"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:gravity="bottom|center_horizontal"
+                                android:text="---"
+                                android:textColor="@color/v2_btn"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toTopOf="@+id/profit_unrealized_tv"
+                                app:layout_constraintHorizontal_weight="1"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toLeftOf="@+id/profit_unrealized_usdt"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_weight="1" />
+
+                            <TextView
+                                android:id="@+id/profit_unrealized_usdt"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:text="USDT"
+                                android:textColor="@color/v2_btn"
+                                android:textSize="13sp"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="@+id/profit_unrealized"
+                                app:layout_constraintHorizontal_weight="1"
+                                app:layout_constraintLeft_toRightOf="@+id/profit_unrealized"
+                                app:layout_constraintRight_toRightOf="parent" />
+
+                            <TextView
+                                android:id="@+id/profit_unrealized_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:gravity="top"
+                                android:text="@string/profit_unrealized"
+                                android:textColor="@color/text1"
+                                android:textSize="13sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/profit_unrealized"
+                                app:layout_constraintVertical_weight="1" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@color/bg_white_gray" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/profit_realized_cl"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/profit_realized_type"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:gravity="right"
+                                android:text="+"
+                                android:textColor="@color/v2_btn"
+                                android:textSize="15sp"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="@+id/profit_realized"
+                                app:layout_constraintHorizontal_weight="0.8"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toLeftOf="@+id/profit_realized" />
+
+                            <TextView
+                                android:id="@+id/profit_realized"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:gravity="bottom|center_horizontal"
+                                android:text="---"
+                                android:textColor="@color/v2_btn"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toTopOf="@+id/profit_realized_tv"
+                                app:layout_constraintHorizontal_weight="1"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toLeftOf="@+id/profit_realized_usdt"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_weight="1" />
+
+                            <TextView
+                                android:id="@+id/profit_realized_usdt"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:text="USDT"
+                                android:textColor="@color/v2_btn"
+                                android:textSize="13sp"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="@+id/profit_realized"
+                                app:layout_constraintHorizontal_weight="1"
+                                app:layout_constraintLeft_toRightOf="@+id/profit_realized"
+                                app:layout_constraintRight_toRightOf="parent" />
+
+                            <TextView
+                                android:id="@+id/profit_realized_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:gravity="top"
+                                android:text="@string/profit_realized"
+                                android:textColor="@color/text1"
+                                android:textSize="13sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/profit_realized"
+                                app:layout_constraintVertical_weight="1" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_invitation_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/icon_me_invitation_code" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="@string/invitation_code"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_invitation_code"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|right"
+                        android:paddingLeft="10dp"
+                        android:text="@string/invitation_code"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_invitation_code_copy"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:adjustViewBounds="true"
+                        android:padding="12dp"
+                        android:src="@mipmap/icon_copy" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/real_name_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/icon_me_real_name" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="@string/real_name"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="4dp"
+                        android:rotation="-90"
+                        android:src="@mipmap/icon_select" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/bg_white_gray" />
+
+                <LinearLayout
+                    android:id="@+id/down_url_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/icon_me_share" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="@string/share_frends"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="4dp"
+                        android:rotation="-90"
+                        android:src="@mipmap/icon_select" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/bg_white_gray" />
+
+                <LinearLayout
+                    android:id="@+id/kefu_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/icon_me_childer" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="@string/me_team"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="4dp"
+                        android:rotation="-90"
+                        android:src="@mipmap/icon_select" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/bg_white_gray" />
+
+                <LinearLayout
+                    android:id="@+id/sys_setting_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/icon_me_sys" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="@string/sys_setting"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="4dp"
+                        android:rotation="-90"
+                        android:src="@mipmap/icon_select" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/bg_white_gray" />
+
+                <LinearLayout
+                    android:id="@+id/version_update_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/icon_me_version_update" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="@string/version_update"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/version_new_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="new"
+                        android:textColor="@color/red"
+                        android:textStyle="italic"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="4dp"
+                        android:rotation="-90"
+                        android:src="@mipmap/icon_select" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/bg_white_gray" />
+
+                <LinearLayout
+                    android:id="@+id/logout_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/icon_me_logout" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="@string/log_out"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="4dp"
+                        android:rotation="-90"
+                        android:src="@mipmap/icon_select" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/bg_white_gray" />
+
+
+            </LinearLayout>
+
+        </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

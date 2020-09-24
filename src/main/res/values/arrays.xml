@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="areas">
+        <item>a86</item>
+        <item>a82</item>
+        <item>a81</item>
+    </array>
+
+    <array name="currencys">
+        <item>ETH</item>
+        <item>BTC</item>
+    </array>
+
+</resources>

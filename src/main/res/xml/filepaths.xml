@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path path="dtl" name="files_path" />
+    <external-path path="dtl" name="camera_photos" />
+    <external-path path="." name="external_files" />
+    <external-path path="." name="media"/>
+    <root-path path="." name="root_path"/>
+    <root-path path="/storage/" name="external_files"/>
+</paths>
